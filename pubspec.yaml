@@ -1,0 +1,54 @@
+name: spotify_ui
+description: A new Flutter application.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+
+  cupertino_icons: ^1.0.0
+  flutter_signin_button: ^1.1.0
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - images/loginimage.jpg
+    - images/pink_floyd.jpg
+    - images/this_is_pink_floyd.jpg
+    - images/this_is_post_malone.jpg
+    - images/this_is_queen.jpg
+    - images/stoney.jpg
+    - images/hailee.jpg
+    - images/queen_best_of.jpg
+    - images/favourite.jpg
+    - images/discover.jpg
+    - images/time_capsule.jpg
+    - images/bohemian.jpg
+    - images/party.jpg
+    - images/work.jpg
+    - images/unplugged.jpg
+    - images/acoustic.jpg
+
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: fonts/Montserrat-Bold.ttf
