@@ -58,73 +58,82 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Column(
                           children: <Widget>[
                             Expanded(
-                              child: Row(
-                                children: <Widget>[
-                                  Expanded(
-                                    child: Container(
-
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.rectangle,
-                                        image: DecorationImage(
-                                          fit: BoxFit.fill,
-                                          image: AssetImage(
-                                              'images/bohemian.jpg'),
-                                        ),
-                                      ),
-                                    ),
-                                    flex: 1,
-                                  ),
-                                  Expanded(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
+                              child: GestureDetector(
+                                onTap: (){
+                                  print('test');
+                                 setState(() {
+                                   // isPlaying=true;
+                                   Navigator.push(context, MaterialPageRoute(builder: (context) => SongPlayer()));
+                                 });
+                                },
+                                child: Row(
+                                  children: <Widget>[
+                                    Expanded(
                                       child: Container(
-                                        child: Column(
-                                          mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                          children: <Widget>[
-                                            Text(
-                                              "Bohemian Rhapsody",
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 18),
-                                            ),
-                                            Text(
-                                              "Queen",
-                                              style: TextStyle(
-                                                  color: Colors.grey,
-                                                  fontSize: 16),
-                                            ),
-                                          ],
+
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.rectangle,
+                                          image: DecorationImage(
+                                            fit: BoxFit.fill,
+                                            image: AssetImage(
+                                                'images/bohemian.jpg'),
+                                          ),
                                         ),
                                       ),
+                                      flex: 1,
                                     ),
-                                    flex: 3,
-                                  ),
-                                  IconButton(icon:Icon(
-                                    Icons.favorite_border,
-                                    color: Colors.white,) ,
-                                      onPressed: (){
+                                    Expanded(
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Container(
+                                          child: Column(
+                                            mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              Text(
+                                                "Bohemian Rhapsody",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 18),
+                                              ),
+                                              Text(
+                                                "Queen",
+                                                style: TextStyle(
+                                                    color: Colors.grey,
+                                                    fontSize: 16),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      flex: 3,
+                                    ),
+                                    IconButton(icon:Icon(
+                                      Icons.favorite_border,
+                                      color: Colors.white,) ,
+                                        onPressed: (){
 
-                                      }),
-                                  IconButton(
-                                    iconSize: 30,
-                                    icon: Icon(
-                                      Icons.play_arrow,
-                                      color: Colors.white,
+                                        }),
+                                    IconButton(
+                                      iconSize: 30,
+                                      icon: Icon(
+                                        Icons.play_arrow,
+                                        color: Colors.white,
+                                      ),
+                                      onPressed: () {},
                                     ),
-                                    onPressed: () {},
-                                  ),
-                                  IconButton(
-                                    iconSize: 30,
-                                    icon: Icon(
-                                      Icons.skip_next,
-                                      color: Colors.white,
+                                    IconButton(
+                                      iconSize: 30,
+                                      icon: Icon(
+                                        Icons.skip_next,
+                                        color: Colors.white,
+                                      ),
+                                      onPressed: () {},
                                     ),
-                                    onPressed: () {},
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                             // Slider(
@@ -181,7 +190,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ),
-        isPlaying ? SongPlayer() : Container(),
+        // isPlaying ? SongPlayer() : Container(),
       ],
     );
   }

@@ -33,7 +33,10 @@ class _SongPlayerState extends State<SongPlayer> {
              icon: Icon(Icons.keyboard_arrow_down,
              color: Colors.white,
              size: 30.0,),
-                onPressed: (){},
+                onPressed: (){
+                  print('bye');
+                  Navigator.pop(context);
+                },
             ),
               Text(
              'Now Playing',
@@ -145,11 +148,14 @@ class _SongPlayerState extends State<SongPlayer> {
                  )
                 ],
               ),
-            )
+            ),
+
             
 ]
     ),
-      )
+
+      ),
+
     );
   }
 }
